@@ -43,3 +43,18 @@ $ vagrant up
 ```
 
 This will download Ubuntu Trusty Tahr (64 bit) and will provision it with the necessary software, creating the LAMP stack.
+
+**Step 4**: Edit your `hosts` file
+Add the "domains" to the hosts file on your machine! The hosts file will redirect your requests into the virtual environment. On Mac and Linux, this file is located at `/etc/hosts`. On Windows, it is located at `C:\Windows\System32\drivers\etc\hosts`. The lines you add to this file will look like the following:
+
+```
+192.168.33.10  uptweb.dev www.uptweb.dev
+```
+
+Once you have added the domain to your hosts file, you can access the site via your web browser at [http://uptweb.dev/](http://uptweb.dev/).
+
+To connect to the MySQL terminal, execute:
+
+```bash
+$ mysql -S /var/run/mysql-default/mysqld.sock -uroot -pjesuismysql
+```

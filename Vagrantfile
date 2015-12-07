@@ -32,7 +32,7 @@ Vagrant.configure(2) do |config|
 
     # my recipes
     chef.add_recipe "web-app"
-    # chef.add_recipe "minesql" # TODO: check; never finishes
+    chef.add_recipe "minesql" 
 
     # inline configs
     chef.json = {
