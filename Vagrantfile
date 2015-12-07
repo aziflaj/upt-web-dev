@@ -19,7 +19,7 @@ Vagrant.configure(2) do |config|
   config.vm.network "private_network", ip: "192.168.33.10"
 
   # Share an additional folder to the guest VM.
-  config.vm.synced_folder "./Code", "/var/www/code"
+  config.vm.synced_folder "./Code", "/var/www/uptweb"
 
   # Enable provisioning with chef solo
   config.vm.provision :chef_solo do |chef|
@@ -31,7 +31,8 @@ Vagrant.configure(2) do |config|
     chef.add_recipe "php"
 
     # my recipes
-    chef.add_recipe "minesql"
+    chef.add_recipe "web-app"
+    # chef.add_recipe "minesql" # TODO: check; never finishes
 
     # inline configs
     chef.json = {
