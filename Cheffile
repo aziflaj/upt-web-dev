@@ -3,11 +3,11 @@
 
 site 'https://supermarket.getchef.com/api/v1'
 
-cookbook 'apache2', '~> 3.1.0'
+# The Linux is already installed
+# as Ubuntu                     # L
+cookbook 'apache2', '~> 3.1.0'  # A
+cookbook 'mysql', '~> 6.1.2'    # M
+cookbook 'php', '~> 1.7.2'      # P
 
-# cookbook 'rvm',
-#   :git => 'https://github.com/fnichol/chef-rvm'
-
-# cookbook 'postgresql',
-#   :git => 'https://github.com/findsyou/cookbooks',
-#   :ref => 'postgresql-improvements'
+# And we now have a LAMPstack
+# Who needs XAMPP after all

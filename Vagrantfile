@@ -23,15 +23,21 @@ Vagrant.configure(2) do |config|
 
   # Enable provisioning with chef solo
   config.vm.provision :chef_solo do |chef|
-    chef.cookbooks_path = ["cookbooks"]
+    chef.cookbooks_path = ["cookbooks", "my-cookbooks"]
 
     # vendor recipes
     chef.add_recipe "apache2"
+    # chef.add_recipe "mysql"
+    chef.add_recipe "php"
+
+    # my recipes
+    chef.add_recipe "minesql"
 
     # inline configs
     chef.json = {
       apache: {
-        default_site_enabled: true
+        default_site_enabled: true,
+        default_modules: ["mod_php5"]
       }
     }
   end
