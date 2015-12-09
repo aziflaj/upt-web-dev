@@ -14,8 +14,7 @@ The software included in the virtual environment is:
 - [Vagrant](http://vagrantup.com/)
 - Ruby and [Bundler](http://bundler.io/)
 
-**Step 1**: Grab the Ruby Gems listed in the `Gemfile`
-Run this in the terminal:
+**Step 1**: Grab the Ruby Gems listed in the `Gemfile`. Run this in the terminal:
 
 > You don't have to type the dollar sign; that's a placeholder for the Terminal prompt
 
@@ -23,8 +22,7 @@ Run this in the terminal:
 $ bundle install
 ```
 
-**Step 2**: Obtain Chef cookbooks
-Run this in the terminal:
+**Step 2**: Obtain Chef cookbooks. Run this in the terminal:
 
 ```bash
 $ librarian-chef install
