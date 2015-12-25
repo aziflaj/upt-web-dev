@@ -1,45 +1,14 @@
 # -*- mode: ruby -*-
 # vi: set ft=ruby :
 
-# All Vagrant configuration is done below. The "2" in Vagrant.configure
-# configures the configuration version (we support older styles for
-# backwards compatibility). Please don't change it unless you know what
-# you're doing.
-Vagrant.configure(2) do |config|
-  config.vm.box = "ubuntu/trusty64"
+Vagrant.configure("2") do |config|
 
-  # Use VirtualBox as VM provider
-  config.vm.provider "virtualbox"
+    config.vm.box = "scotch/box"
+    config.vm.network "private_network", ip: "192.168.33.10"
+    config.vm.hostname = "scotchbox"
+    config.vm.synced_folder ".", "/var/www", :mount_options => ["dmode=777", "fmode=666"]
+    
+    # Optional NFS. Make sure to remove other synced_folder line too
+    #config.vm.synced_folder ".", "/var/www", :nfs => { :mount_options => ["dmode=777","fmode=666"] }
 
-  # Forward Apache2 port 80 to host's 8080
-  config.vm.network "forwarded_port", guest: 80, host: 8080
-
-  # Create a private network, which allows host-only access to the machine
-  # using a specific IP.
-  config.vm.network "private_network", ip: "192.168.33.10"
-
-  # Share an additional folder to the guest VM.
-  config.vm.synced_folder "./Code", "/var/www/uptweb"
-
-  # Enable provisioning with chef solo
-  config.vm.provision :chef_solo do |chef|
-    chef.cookbooks_path = ["cookbooks", "my-cookbooks"]
-
-    # vendor recipes
-    chef.add_recipe "apache2"
-    # chef.add_recipe "mysql"
-    chef.add_recipe "php"
-
-    # my recipes
-    chef.add_recipe "web-app"
-    chef.add_recipe "minesql" 
-
-    # inline configs
-    chef.json = {
-      apache: {
-        default_site_enabled: true,
-        default_modules: ["mod_php5"]
-      }
-    }
-  end
 end
