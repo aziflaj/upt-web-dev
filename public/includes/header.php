@@ -22,7 +22,7 @@
           <a href="#">Login</a>
         </li>
         <li>
-          <a href="#">Sign up</a>
+          <a href="signup.phtml">Sign up</a>
         </li>
       </ul>
     </div>

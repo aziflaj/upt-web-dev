@@ -5,11 +5,11 @@
             <div class="col-narrow">
                 <div class="footer__success">
                     <h2 class="footer__section-title">Histori Suksesi</h2>
-                    <h3 class="footer__success--name">Reshat Arbana</h3>
+                    <h3 class="footer__success--name">Foo Bar</h3>
                     <p class="footer__success--story">
-                        Sot jam zhvillues ne kompanine ABC Software dhe jam i
-                        gëzuar në pozicionin që kam. Kjo falë ndërmjetësimit
-                        të ketij portali.
+                        Sot jam zhvillues ne kompanine ABC Software dhe jam shume i
+                        kenaqur ne pozicionin qe kam. Kjo fale ndermjetesimit
+                        te ketij portali.
                     </p>
                 </div>
             </div>
@@ -68,7 +68,5 @@
         </div>
     </footer>
 </div>
-
-
 </body>
 </html>
