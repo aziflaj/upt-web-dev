@@ -1,8 +1,6 @@
-<?php include('includes/header.php'); ?>
-
 <div class="row container-wide signup">
   <h1>Regjistrohu si student</h1>
-  <form action="logic/signup.php" method="post">
+  <form action="signup.php" method="post">
     <table border="0">
       <tbody>
         <tr>
@@ -57,5 +55,3 @@
     </table>
   </form>
 </div>
-
-<?php include('includes/footer.php'); ?>
