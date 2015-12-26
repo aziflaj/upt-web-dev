@@ -5,6 +5,7 @@
  * | '_ \ / _ \/ _` |/ _` |/ _ \ '__|                 *
  * | | | |  __/ (_| | (_| |  __/ |                    *
  * |_| |_|\___|\__,_|\__,_|\___|_|                    *
+ *                                                    *
  ******************************************************/
 
 .header {
@@ -28,4 +29,62 @@
 
 .header-links a:hover {
   background-color: #2E467C;
+}
+
+
+/******************************************************
+ *   __            _                                  *
+ *  / _|          | |                                 *
+ * | |_ ___   ___ | |_ ___ _ __                       *
+ * |  _/ _ \ / _ \| __/ _ \ '__|                      *
+ * | || (_) | (_) | ||  __/ |                         *
+ * |_| \___/ \___/ \__\___|_|                         *
+ *                                                    *
+ ******************************************************/
+.footer__section-title {
+  color: white;
+  padding-bottom: 1em;
+}
+
+.footer__success {
+  padding-right: 2em;
+}
+
+.footer__success--name {
+  color: white;
+}
+
+.footer__success--story {
+  text-align: justify;
+}
+
+.footer__contact {
+  padding-left: 2em;
+}
+
+.footer__contact > ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer__help {
+  padding-left: 2em;
+}
+
+.footer__help > ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer__social {
+  padding-left: 2em;
+}
+
+.footer__social > ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer__copyright {
+  padding-top: 2em;
 }

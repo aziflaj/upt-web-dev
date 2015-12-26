@@ -2,6 +2,6 @@
 # vagrant up
 .vagrant
 
-# You don't need this; you can get it using librarian-chef
-cookbooks
-tmp
+# IntelliJ specific files/folders
+.idea
+*.iml
