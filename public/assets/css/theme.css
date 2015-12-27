@@ -1,4 +1,11 @@
+.content {
+  min-height: 350px;
+  width: 100%;
+}
+
+
 .btn {
+  border: 0;
   text-decoration: none;
   color: #FFF;
   padding: 0.2em 0.5em;
@@ -32,6 +39,10 @@
 
 .btn.btn-lg {
   font-size: 1.5em;
+}
+
+.btn.btn-md {
+  font-size: 1.2em;
 }
 
 .btn.btn-sm {

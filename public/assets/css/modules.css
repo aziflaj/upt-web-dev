@@ -13,6 +13,8 @@
 }
 
 .header-links {
+  float: right;
+  margin-right: 5em;
   list-style: none;
 }
 
@@ -82,7 +84,16 @@
 .signup {
   margin-top: 2em;
   margin-bottom: 5em;
+  text-align: center;
 }
+
+.signup__form table {
+  text-align: left;
+  margin-top: 1em;
+  position: relative;
+  left: 32%;
+}
+
 
 
 

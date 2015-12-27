@@ -14,16 +14,16 @@
     <div class="row header">
       <ul class="header-links">
         <li>
-          <a href="#">Home</a>
+          <a href="/">Home</a>
         </li>
         <li>
-          <a href="#">About</a>
+          <a href="">About</a>
         </li>
         <li>
           <a href="#">Login</a>
         </li>
         <li>
-          <a href="signup.phtml">Sign up</a>
+          <a href="signup.php">Sign up</a>
         </li>
       </ul>
     </div>
