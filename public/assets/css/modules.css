@@ -109,3 +109,31 @@
   margin-top: 2em;
   margin-bottom: 5em;
 }
+
+
+
+/*******************************************************
+ *  _                                                  *
+ * | |__   ___  _ __ ___   ___ _ __   __ _  __ _  ___  *
+ * | '_ \ / _ \| '_ ` _ \ / _ \ '_ \ / _` |/ _` |/ _ \ *
+ * | | | | (_) | | | | | |  __/ |_) | (_| | (_| |  __/ *
+ * |_| |_|\___/|_| |_| |_|\___| .__/ \__,_|\__, |\___| *
+ *                            |_|          |___/       *
+ *******************************************************/
+
+.homepage {
+  height: inherit;
+  background: url("../images/homepage_background.jpg") no-repeat center center fixed;
+  background-size: cover;
+  text-align: center;
+  padding-top: 5em;
+}
+
+.homepage__slogan {
+  color: #EDEADB;
+}
+
+.homepage__auth-buttons {
+  margin-top: 2em;
+  font-size: 1.6em;
+}

@@ -6,6 +6,7 @@
     <meta name="author" content="Aldo Ziflaj">
     <meta name="description" content="Portali i Punes per studente, detyre kursi ne UptWebDesign">
     <link rel="stylesheet" href="assets/css/base.css">
+    <link rel="stylesheet" href="assets/css/theme.css">
     <link rel="stylesheet" href="assets/css/layout.css">
     <link rel="stylesheet" href="assets/css/modules.css">
   </head>

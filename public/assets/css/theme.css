@@ -1,0 +1,39 @@
+.btn {
+  text-decoration: none;
+  color: #FFF;
+  padding: 0.2em 0.5em;
+  border-radius: 4px;
+}
+
+.btn.btn-default {
+  color: #000;
+  background-color: #FFF;
+}
+
+.btn.btn-primary {
+  background-color: #337AB7;
+}
+
+.btn.btn-success {
+  background-color: #5CB85C;
+}
+
+.btn.btn-info {
+  background-color: #5BC0DE;
+}
+
+.btn.btn-warning {
+  background-color: #F0AD4E;
+}
+
+.btn.btn-danger {
+  background-color: #D9534F;
+}
+
+.btn.btn-lg {
+  font-size: 1.5em;
+}
+
+.btn.btn-sm {
+  font-size: 0.8em;
+}
