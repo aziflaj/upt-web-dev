@@ -8,6 +8,7 @@ if (isset($_SESSION['id'])) {
 ?>
 
 <?php include('includes/header.php') ?>
+<script src="assets/js/signup.js" charset="utf-8"></script>
 
 <div class="row container-wide content signup">
   <h1>Regjistrohu si student</h1>
@@ -55,7 +56,12 @@ if (isset($_SESSION['id'])) {
 
           <tr>
             <td>Ditelindja (dd/MM/yyyy)</td>
-            <td><input type="text" name="dob"></td>
+            <td>
+              <input type="date" name="dob" id="signup_dob" oninput="validateDate()">
+            </td>
+            <td>
+              <span id="invalid_date_msg" style="visibility: hidden; color: red; font-size: 12px">invalid date</span>
+            </td>
           </tr>
 
           <tr style="text-align: center;">
@@ -66,7 +72,7 @@ if (isset($_SESSION['id'])) {
 
           <tr style="text-align: center;">
             <td colspan="2">
-              <input type="submit" class="btn btn-success btn-md" value="Sign up">
+              <input type="submit" id="signup_submit" class="btn btn-success btn-md" value="Sign up">
             </td>
           </tr>
         </tbody>

@@ -9,21 +9,23 @@
     <link rel="stylesheet" href="assets/css/theme.css">
     <link rel="stylesheet" href="assets/css/layout.css">
     <link rel="stylesheet" href="assets/css/modules.css">
+
+    <script src="assets/js/utils.js" charset="utf-8"></script>
   </head>
   <body>
     <div class="row header">
       <ul class="header-links">
         <li>
-          <a href="/">Home</a>
+          <a href="/">Kreu</a>
         </li>
         <li>
-          <a href="">About</a>
+          <a href="">Rreth nesh</a>
         </li>
         <li>
-          <a href="login.php">Login</a>
+          <a href="login.php">Hyr</a>
         </li>
         <li>
-          <a href="signup.php">Sign up</a>
+          <a href="signup.php">Regjistrohu</a>
         </li>
       </ul>
     </div>
