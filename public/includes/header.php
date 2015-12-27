@@ -20,7 +20,7 @@
           <a href="">About</a>
         </li>
         <li>
-          <a href="#">Login</a>
+          <a href="login.php">Login</a>
         </li>
         <li>
           <a href="signup.php">Sign up</a>
