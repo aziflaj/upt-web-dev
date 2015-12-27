@@ -43,52 +43,26 @@
  *                                                    *
  ******************************************************/
 
-.footer__section-title {
-  color: white;
-  padding-bottom: 1em;
-}
-
-.footer__success {
-  padding-right: 2em;
-}
-
-.footer__success--name {
-  color: white;
-}
-
-.footer__success--story {
-  text-align: justify;
-}
-
-.footer__contact {
-  padding-left: 2em;
-}
-
-.footer__contact > ul {
-  list-style: none;
-  padding: 0;
-}
-
-.footer__help {
-  padding-left: 2em;
-}
-
-.footer__help > ul {
-  list-style: none;
-  padding: 0;
+.footer {
+  color: #FFF;
+  background-color: #183470;
 }
 
 .footer__social {
   padding-left: 2em;
+  float: right;
+  margin-right: 5em;
 }
 
-.footer__social > ul {
-  list-style: none;
-  padding: 0;
+.footer__social-item {
+  list-style-type: none;
+  display: inline-block;
+  padding-top: 0.7em;
+  padding-left: 0.8em;
 }
 
 .footer__copyright {
-  padding-top: 2em;
+  padding: 2em;
 }
 
 
@@ -122,7 +96,7 @@
  *******************************************************/
 
 .homepage {
-  height: inherit;
+  height: 70%;
   background: url("../images/homepage_background.jpg") no-repeat center center fixed;
   background-size: cover;
   text-align: center;

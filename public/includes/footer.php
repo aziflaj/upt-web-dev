@@ -1,72 +1,36 @@
 <!-- footer -->
-<div class="row row--dark-grey row--padding-medium footer">
-    <footer class="row container-wide">
-        <div class="row">
-            <div class="col-narrow">
-                <div class="footer__success">
-                    <h2 class="footer__section-title">Histori Suksesi</h2>
-                    <h3 class="footer__success--name">Foo Bar</h3>
-                    <p class="footer__success--story">
-                        Sot jam zhvillues ne kompanine ABC Software dhe jam shume i
-                        kenaqur ne pozicionin qe kam. Kjo fale ndermjetesimit
-                        te ketij portali.
-                    </p>
-                </div>
-            </div>
-            <div class="col-narrow">
-                <div class="footer__contact">
-                    <h2 class="footer__section-title">Kontakto</h2>
-                    <ul>
-                        <li class="footer__contact-entry">
-                            <a href="mailto:aldoziflaj95@gmail.com">
-                                email@kompania.com
-                            </a>
-                        </li>
-                        <li class="footer__contact-entry">+355 69 324 3548</li>
-                        <li class="footer__contact-entry">+355 68 123 4567</li>
-                        <li class="footer__contact-entry">+355 44 123 456</li>
-                    </ul>
-                </div>
-            </div>
+<div class="row footer">
+  <div class="col-narrow footer__copyright">
+    &copy; Copyright by Aldo Ziflaj <?php echo ( date('Y') > 2015 ? "2015 - " . date('Y') : "2015" ); ?>
+  </div>
 
-            <div class="col-narrow">
-                <div class="footer__help">
-                    <h2 class="footer__section-title">Ndihme</h2>
-                    <ul>
-                        <li class="footer__help-entry">Ndihme per CV</li>
-                        <li class="footer__help-entry">Keshilla interviste</li>
-                        <li class="footer__help-entry">Udhezim karriere</li>
-                        <li class="footer__help-entry">Shembull CV-je</li>
-                    </ul>
-                </div>
-            </div>
+  <div class="footer__social">
+    <ul class="footer__social-list">
+      <li class="footer__social-item">
+        <a href="https://github.com/aziflaj/" target="_blank">
+          <img src="assets/images/social/github.png" alt="GH" />
+        </a>
+      </li>
 
-            <div class="col-narrow">
-                <div class="footer__social">
-                    <h2 class="footer__section-title">Media Sociale</h2>
-                    <ul>
-                        <li class="footer__social-media">
-                            <a href="#">Facebook</a>
-                        </li>
-                        <li class="footer__social-media">
-                            <a href="#">Twitter</a>
-                        </li>
-                        <li class="footer__social-media">
-                            <a href="#">Google+</a>
-                        </li>
-                        <li class="footer__social-media">
-                            <a href="#">LinkedIn</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <div class="row container-wide">
-          <div class="col-narrow footer__copyright">
-            &copy; Aldo Ziflaj 2015
-          </div>
-        </div>
-    </footer>
+      <li class="footer__social-item">
+        <a href="https://twitter.com/aziflaj" target="_blank">
+          <img src="assets/images/social/twitter.png" alt="T" />
+        </a>
+      </li>
+
+      <li class="footer__social-item">
+        <a href="https://www.facebook.com/aldo.ziflaj" target="_blank">
+          <img src="assets/images/social/facebook.png" alt="F" />
+        </a>
+      </li>
+
+      <li class="footer__social-item">
+        <a href="https://al.linkedin.com/in/aziflaj" target="_blank">
+          <img src="assets/images/social/linkedIn.png" alt="IN" />
+        </a>
+      </li>
+    </ul>
+  </div>
 </div>
 </body>
 </html>
