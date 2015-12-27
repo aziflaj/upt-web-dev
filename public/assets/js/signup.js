@@ -20,3 +20,48 @@ function validateDate() {
     }
   }
 }
+
+
+function validateEmail() {
+  var simpleValidator = /^[a-zA-Z0-9]+@[a-zA-Z0-9]+\.[a-z]{3}$/; // e.g. aldoziflaj95@gmail.com
+  var compoundValidator = /^[a-zA-Z0-9]+@[a-zA-Z0-9]+\.[a-z]{3}\.[a-z]{2}$/; // e.g. jamesbond@mi6.gov.uk
+
+  var email = $('#email').value;
+
+  if (simpleValidator.test(email) || compoundValidator.test(email)) {
+    $('#invalid_email_msg').style.visibility = "hidden";
+    $('#signup_submit').disabled = false;
+  } else {
+    $('#invalid_email_msg').style.visibility = "visible";
+    $('#signup_submit').disabled = true;
+  }
+}
+
+
+function validatePassword() {
+  // a length of 8, including lowercase/uppercase letters and at least a number
+  var validator = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/;
+  var pwd = $('#password').value;
+
+  if (!validator.test(pwd)) {
+    $('#invalid_pwd_msg').style.visibility = "visible";
+    $('#signup_submit').disabled = true;
+  } else {
+    $('#invalid_pwd_msg').style.visibility = "hidden";
+    $('#signup_submit').disabled = false;
+  }
+}
+
+
+function validatePasswordRepeat() {
+  var pwd = $('#password').value;
+  var pwd_rpt = $('#password_repeat').value;
+
+  if (pwd !== pwd_rpt) {
+    $('#invalid_pwd_rpt_msg').style.visibility = "visible";
+    $('#signup_submit').disabled = true;
+  } else {
+    $('#invalid_pwd_rpt_msg').style.visibility = "hidden";
+    $('#signup_submit').disabled = false;
+  }
+}

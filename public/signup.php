@@ -28,17 +28,32 @@ if (isset($_SESSION['id'])) {
 
           <tr>
             <td>Email</td>
-            <td><input type="email" name="email"></td>
+            <td><input type="email" name="email" id="email" oninput="validateEmail()"></td>
+            <td>
+              <span id="invalid_email_msg" style="visibility: hidden; color: red; font-size: 12px">
+                Email jo i sakte
+              </span>
+            </td>
           </tr>
 
           <tr>
             <td>Fjalekalimi</td>
-            <td><input type="password" name="password"></td>
+            <td><input type="password" id="password" name="password" oninput="validatePassword()"></td>
+            <td>
+              <span id="invalid_pwd_msg" style="visibility: hidden; color: red; font-size: 12px">
+                Te pakten 8 karaktere, perfshire numra dhe shkronja
+              </span>
+            </td>
           </tr>
 
           <tr>
             <td>Perserit fjalekalimin</td>
-            <td><input type="password" name="password_repeat"></td>
+            <td><input type="password" name="password_repeat" id="password_repeat" oninput="validatePasswordRepeat()"></td>
+            <td>
+              <span id="invalid_pwd_rpt_msg" style="visibility: hidden; color: red; font-size: 12px">
+                Fjalekalimet nuk perputhen
+              </span>
+            </td>
           </tr>
 
           <tr>
@@ -60,7 +75,9 @@ if (isset($_SESSION['id'])) {
               <input type="date" name="dob" id="signup_dob" oninput="validateDate()">
             </td>
             <td>
-              <span id="invalid_date_msg" style="visibility: hidden; color: red; font-size: 12px">invalid date</span>
+              <span id="invalid_date_msg" style="visibility: hidden; color: red; font-size: 12px">
+                Date jo e sakte
+              </span>
             </td>
           </tr>
 
