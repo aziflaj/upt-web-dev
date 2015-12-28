@@ -7,7 +7,7 @@ if (isset($_SESSION['id'])) {
 }
 ?>
 
-<?php include('includes/header.php') ?>
+<?php include_once('includes/header.php') ?>
 <script src="assets/js/signup.js" charset="utf-8"></script>
 
 <div class="row container-wide content signup">
@@ -83,7 +83,7 @@ if (isset($_SESSION['id'])) {
 
           <tr style="text-align: center;">
             <td colspan="2">
-              Already a member? <a href="#">Log in here</a>
+              E keni nje llogari? <a href="login.php">Hyni ketu</a>
             </td>
           </tr>
 
@@ -98,4 +98,4 @@ if (isset($_SESSION['id'])) {
   </div>
 </div>
 
-<?php include('includes/footer.php') ?>
+<?php include_once('includes/footer.php') ?>

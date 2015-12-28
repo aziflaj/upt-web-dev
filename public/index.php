@@ -1,4 +1,4 @@
-<?php include('includes/header.php') ?>
+<?php include_once('includes/header.php') ?>
 
 <div class="content homepage">
   <h1 class="homepage__slogan">Bashkoju portalit me te madh te punes ne Shqiperi</h1>
@@ -8,4 +8,4 @@
   </div>
 </div>
 
-<?php include('includes/footer.php') ?>
+<?php include_once('includes/footer.php') ?>

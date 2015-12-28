@@ -122,3 +122,27 @@
   margin-top: 2em;
   font-size: 1.6em;
 }
+
+
+
+/******************************************************
+ *  _             _                                   *
+ * | | ___   __ _(_)_ __                              *
+ * | |/ _ \ / _` | | '_ \                             *
+ * | | (_) | (_| | | | | |                            *
+ * |_|\___/ \__, |_|_| |_|                            *
+ *          |___/                                     *
+ ******************************************************/
+
+.login {
+  margin-top: 2em;
+  margin-bottom: 5em;
+  text-align: center;
+}
+
+.login__form table {
+  text-align: left;
+  margin-top: 1em;
+  position: relative;
+  left: 32%;
+}
