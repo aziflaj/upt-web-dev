@@ -7,7 +7,7 @@ session_start();
 
 // if he user is already logged in, redirect them on the index page
 if (isset($_SESSION['id'])) {
-  return header("location: index.php");
+  return header("location: /");
 }
 
 // sign the new user up and redirect him to index.

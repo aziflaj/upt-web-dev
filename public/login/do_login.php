@@ -1,6 +1,7 @@
 <?php
 include_once('functions.php');
 $db = require('../config/db.php');
+session_start();
 
 if (!all_params($_POST)) {
   return header("location: login.php");
@@ -22,7 +23,8 @@ if (mysqli_num_rows($result) > 0) {
     $students = mysqli_query($connection, $find_customer_sql);
     $student_row = mysqli_fetch_assoc($students); // only one result set
     $_SESSION['id'] = $row['id']; // logging in the student
-    // return header("location: index.php"); 
+    echo $_SESSION['id'];
+    // return header("location: index.php");
   } else {
     echo "not found";
   }

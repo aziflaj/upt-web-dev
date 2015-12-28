@@ -21,11 +21,21 @@
         <li>
           <a href="">Rreth nesh</a>
         </li>
+
+        <?php if (isset($_SESSION['id'])): ?>
+        <li>
+          <a href="#">Settings</a>
+        </li>
+        <li>
+          <a href="#">Dil</a>
+        </li>
+        <?php else: ?>
         <li>
           <a href="login.php">Hyr</a>
         </li>
         <li>
           <a href="signup.php">Regjistrohu</a>
         </li>
+        <?php endif; ?>
       </ul>
     </div>
