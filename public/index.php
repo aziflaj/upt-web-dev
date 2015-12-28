@@ -4,7 +4,22 @@ session_start();
 include_once('includes/header.php');
 
 if (isset($_SESSION['id'])) {
-  include_once('views/student/dashboard.php');
+
+  switch($_SESSION['type_id']) {
+
+    case 1:
+      include_once('views/admin/dashboard.php');
+      break;
+
+    case 2:
+      include_once('views/student/dashboard.php');
+      break;
+
+    case 3:
+      include_once('views/company/dashboard.php');
+      break;
+  }
+
 } else {
   include_once('views/homepage.php');
 }
