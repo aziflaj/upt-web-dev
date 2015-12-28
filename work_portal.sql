@@ -7,6 +7,7 @@ SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='TRADITIONAL,ALLOW_INVALID_DATES';
 -- -----------------------------------------------------
 -- Schema work_portal
 -- -----------------------------------------------------
+DROP SCHEMA IF EXISTS `work_portal` ;
 
 -- -----------------------------------------------------
 -- Schema work_portal
@@ -119,11 +120,11 @@ ENGINE = InnoDB;
 DROP TABLE IF EXISTS `work_portal`.`job_entries` ;
 
 CREATE TABLE IF NOT EXISTS `work_portal`.`job_entries` (
-  `id` INT(11) NOT NULL AUTO_INCREMENT,
+  `id` INT(11) NOT NULL,
   `company_id` INT(11) NOT NULL,
   `title` VARCHAR(45) NOT NULL,
   `description` MEDIUMTEXT NOT NULL,
-  `created_at` DATETIME NOT NULL,
+  `created_at` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`),
   INDEX `company_id_idx` (`company_id` ASC),
   CONSTRAINT `company_id`
@@ -176,7 +177,7 @@ CREATE TABLE IF NOT EXISTS `work_portal`.`admin_notifications` (
   `title` VARCHAR(45) NOT NULL,
   `description` MEDIUMTEXT NOT NULL,
   `admin_id` INT(11) NOT NULL,
-  `created_at` DATETIME NOT NULL,
+  `created_at` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`),
   INDEX `admin_id_idx` (`admin_id` ASC),
   CONSTRAINT `admin_id`
@@ -186,10 +187,6 @@ CREATE TABLE IF NOT EXISTS `work_portal`.`admin_notifications` (
     ON UPDATE CASCADE)
 ENGINE = InnoDB;
 
-
-SET SQL_MODE=@OLD_SQL_MODE;
-SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
-SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
 
 -- -----------------------------------------------------
 -- Data for table `work_portal`.`types`
@@ -237,7 +234,7 @@ COMMIT;
 -- -----------------------------------------------------
 START TRANSACTION;
 USE `work_portal`;
-INSERT INTO `work_portal`.`admins` (`id`, `first_name`, `last_name`, `user_id`, `username`) VALUES (DEFAULT, 'James', 'Bond', 2, DEFAULT);
+INSERT INTO `work_portal`.`admins` (`id`, `first_name`, `last_name`, `user_id`, `username`) VALUES (DEFAULT, 'James', 'Bond', 2, 'jbond');
 
 COMMIT;
 
@@ -251,3 +248,41 @@ INSERT INTO `work_portal`.`companies` (`id`, `company_name`, `user_id`, `descrip
 INSERT INTO `work_portal`.`companies` (`id`, `company_name`, `user_id`, `description`, `website`) VALUES (DEFAULT, 'Ikub', 4, 'Kompania ikub.al sh.p.k. nisi punën e saj në vitin 2006, me një nga iniciativat më të suksesshme në treg, portalin e informacionit ikub.al.', 'http://kompania.ikub.al/');
 
 COMMIT;
+
+
+-- -----------------------------------------------------
+-- Data for table `work_portal`.`job_entries`
+-- -----------------------------------------------------
+START TRANSACTION;
+USE `work_portal`;
+INSERT INTO `work_portal`.`job_entries` (`id`, `company_id`, `title`, `description`, `created_at`) VALUES (1, 1, 'Zhvillues .NET', 'Kerkohet zhvillues ne platformen .NET. Kandidati te kete njohuri te mira ne ASP.NET, HTML, CSS, JavaScript dhe jQuery', DEFAULT);
+INSERT INTO `work_portal`.`job_entries` (`id`, `company_id`, `title`, `description`, `created_at`) VALUES (2, 1, 'Data Entry', 'Kerkohet Data Entry', DEFAULT);
+INSERT INTO `work_portal`.`job_entries` (`id`, `company_id`, `title`, `description`, `created_at`) VALUES (3, 2, 'Zhvillues Android', 'Kerkohet Zhvillues, per zhvillimin dhe mirembajtjen e aplikacionit Mobile ne Android. Perfshihehen te gjitha fazat qe nga konceptimi, zhvillimi dhe mirembajtja', DEFAULT);
+
+COMMIT;
+
+
+-- -----------------------------------------------------
+-- Data for table `work_portal`.`students_interested`
+-- -----------------------------------------------------
+START TRANSACTION;
+USE `work_portal`;
+INSERT INTO `work_portal`.`students_interested` (`id`, `position_id`, `student_id`, `company_id`) VALUES (DEFAULT, 3, 1, 2);
+INSERT INTO `work_portal`.`students_interested` (`id`, `position_id`, `student_id`, `company_id`) VALUES (DEFAULT, 1, 3, 1);
+
+COMMIT;
+
+
+-- -----------------------------------------------------
+-- Data for table `work_portal`.`admin_notifications`
+-- -----------------------------------------------------
+START TRANSACTION;
+USE `work_portal`;
+INSERT INTO `work_portal`.`admin_notifications` (`id`, `title`, `description`, `admin_id`, `created_at`) VALUES (DEFAULT, 'Sistemi eshte online!', 'Sistemi eshte online duke filluar nga data e sotme. Perdorim te mbare dhe ftoni miqte tuaj t\'i bashkohen Portalit te Punes', 1, DEFAULT);
+
+COMMIT;
+
+
+SET SQL_MODE=@OLD_SQL_MODE;
+SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
+SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
