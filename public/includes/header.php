@@ -27,7 +27,7 @@
           <a href="#">Settings</a>
         </li>
         <li>
-          <a href="#">Dil</a>
+          <a href="/logout.php">Dil</a>
         </li>
         <?php else: ?>
         <li>

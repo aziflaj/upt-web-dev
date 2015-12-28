@@ -22,9 +22,13 @@ if (mysqli_num_rows($result) > 0) {
 
     $students = mysqli_query($connection, $find_customer_sql);
     $student_row = mysqli_fetch_assoc($students); // only one result set
+
     $_SESSION['id'] = $row['id']; // logging in the student
-    echo $_SESSION['id'];
-    // return header("location: index.php");
+    $_SESSION['type_id'] = $row['type_id'];
+    $_SESSION['local_id'] = $student_row['id'];
+
+    mysqli_close($connection);
+    return header("location: /");
   } else {
     echo "not found";
   }
