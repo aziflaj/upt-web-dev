@@ -1,1 +1,3 @@
-Hello <?= $_SESSION['id'] ?>
+<?php
+echo "Hello " . $_SESSION['id'];
+?>
