@@ -1,3 +1,8 @@
+/**
+ * Validates the date of birth (dob) in the signup form
+ *
+ * @returns True if the date is valid, otherwise false
+ */
 function validateDate() {
   var date = $('#signup_dob').value;
   var validator = /^[0-9]{2}\/[0-9]{2}\/[0-9]{4}$/;
@@ -22,6 +27,11 @@ function validateDate() {
 }
 
 
+/**
+ * Validates the email in the signup form
+ *
+ * @returns True if the email is valid, otherwise false
+ */
 function validateEmail() {
   var simpleValidator = /^[a-zA-Z0-9]+@[a-zA-Z0-9]+\.[a-z]{3}$/; // e.g. aldoziflaj95@gmail.com
   var compoundValidator = /^[a-zA-Z0-9]+@[a-zA-Z0-9]+\.[a-z]{3}\.[a-z]{2}$/; // e.g. jamesbond@mi6.gov.uk
@@ -38,8 +48,14 @@ function validateEmail() {
 }
 
 
+/**
+ * Validates the password in the signup form. Password should be at least
+ * 8 characters long and include uppercase or lowercase letters and at least
+ * one digit
+ *
+ * @returns True if the password is valid, otherwise false
+ */
 function validatePassword() {
-  // a length of 8, including lowercase/uppercase letters and at least a number
   var validator = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/;
   var pwd = $('#password').value;
 
@@ -53,6 +69,11 @@ function validatePassword() {
 }
 
 
+/**
+ * Validates the password_repeat field in the signup form
+ *
+ * @returns True if the password_repeat is the same as password, otherwise false
+ */
 function validatePasswordRepeat() {
   var pwd = $('#password').value;
   var pwd_rpt = $('#password_repeat').value;
