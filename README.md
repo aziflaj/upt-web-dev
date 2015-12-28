@@ -1,6 +1,23 @@
 # Web Development - Final Project
-
 This is the repository of the final project in the Web Development course I'm following in the Polytechnic University of Tirana while studying Computer Engineering.
+
+## Set Up the Environment
+The application uses the [Scotchbox](http://box.scotch.io/) Virtual Machine as development environment. To set it up, you need to have [VirtualBox](https://www.virtualbox.org/wiki/Downloads) and [Vagrant](http://vagrantup.com/) installed.
+
+To create the VM execute:
+```bash
+$ vagrant up
+```
+
+> It might require some time to set up the VM the first time, since it needs to download Ubuntu and provision it with all the tools, but this happens only the first time. When you reuse the same VM, it won' donwload anything.
+
+The environment created contains Apache2 webserver, PHP 5.6, MySQL 5.5, and other tools (you can find the complete list [here]((http://box.scotch.io/)).
+
+To log in the VM, execute:
+
+```bash
+$ vagrant ssh     # you can exit by typing exit
+```
 
 ## Create the database
 ![DB schema](https://raw.githubusercontent.com/aziflaj/upt-web-dev/master/docs/eer_diagram.png)
