@@ -31,7 +31,7 @@ if (all_params($_POST)) {
   // $_SESSION['id'] = $result['user_id'];
 
   // return header("location: somewhere.php");
-
+  mysqli_close($connection);
 } else {
   return header("location: signup.php");
 }

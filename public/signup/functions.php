@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Checks if the params of signup are all settype
+ * Checks if the params of signup are all set
  *
  * @param mixed[] Array of parameters from the $_POST
  * @return boolean True if all params are set, otherwise false
