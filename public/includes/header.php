@@ -15,6 +15,12 @@
   <body>
     <div class="row header">
       <ul class="header-links">
+        <?php if (isset($_SESSION['id'])): ?>
+        <li>
+          Welcome
+        </li>
+        <?php endif; ?>
+
         <li>
           <a href="/">Kreu</a>
         </li>

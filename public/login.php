@@ -48,7 +48,7 @@ if (isset($_SESSION['id'])) {
 
           <tr style="text-align: center;">
             <td colspan="2">
-              <input type="submit" id="login_submit" class="btn btn-success btn-md" value="Log in">
+              <input type="submit" style="margin: 1em;" id="login_submit" class="btn btn-success btn-md" value="Log in">
             </td>
           </tr>
         </tbody>

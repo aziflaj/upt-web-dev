@@ -18,7 +18,7 @@ mysqli_close($connection);
 <div class="content student--settings">
   <h1>Ndrysho te dhenat personale</h1>
   <div class="student--settings__form">
-    <form action="" method="post">
+    <form action="../../student/update_settings.php" method="post">
       <table border="0">
         <tbody>
           <tr>
