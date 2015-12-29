@@ -1,6 +1,6 @@
 <?php
 include_once('functions.php');
-$db = require('../config/db.php');
+$db = require_once(__DIR__ . '/../config/db.php');
 session_start();
 
 if (!all_params($_POST)) {
