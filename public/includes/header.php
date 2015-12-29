@@ -14,13 +14,14 @@
   </head>
   <body>
     <div class="row header">
-      <ul class="header-links">
-        <?php if (isset($_SESSION['id'])): ?>
-        <li>
-          Welcome
-        </li>
-        <?php endif; ?>
+      <?php if (isset($_SESSION['id'])): ?>
+      <div class="user-handle">
+        Welcome <?= $_SESSION['user_handle'] ?>
+      </div>
+      <?php endif; ?>
 
+
+      <ul class="header-links">
         <li>
           <a href="/">Kreu</a>
         </li>

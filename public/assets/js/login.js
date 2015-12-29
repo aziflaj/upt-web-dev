@@ -4,7 +4,7 @@
  * @returns True if the email is valid, otherwise false
  */
 function validateEmail() {
-  var simpleValidator = /^[a-zA-Z0-9]+@[a-zA-Z0-9]+\.[a-z]{3}$/; // e.g. aldoziflaj95@gmail.com
+  var simpleValidator = /^[a-zA-Z0-9]+@[a-zA-Z0-9]+\.[a-z]{2,}$/; // e.g. aldoziflaj95@gmail.com
   var compoundValidator = /^[a-zA-Z0-9]+@[a-zA-Z0-9]+\.[a-z]{3}\.[a-z]{2}$/; // e.g. jamesbond@mi6.gov.uk
 
   var email = $('#email').value;

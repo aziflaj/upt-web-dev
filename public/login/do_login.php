@@ -52,6 +52,7 @@ if (mysqli_num_rows($result) > 0) {
     }
 
     $_SESSION['id'] = $row['id']; // logging in the user
+    $_SESSION['type_id'] = $row['type_id']; // logging in the user
     mysqli_close($connection);
     return header("location: /");
   } else {
