@@ -14,10 +14,49 @@ $join_sql .= "inner join users on users.id = students.user_id ";
 $join_sql .= "inner join job_entries as je on je.company_id = si.company_id";
 
 $result = mysqli_query($connection, $join_sql);
-
-while ($row = mysqli_fetch_assoc($result)) {
-  echo "{$row['first_name']} {$row['last_name']} ({$row['email']}) eshte i interesuar ne \"{$row['title']}\"<br>";
-}
-
-mysqli_close($connection);
 ?>
+
+<div class="content company--dashboard">
+  <div class="company--dashboard__create-post">
+    <form action="" method="post">
+      <table border="0">
+        <tbody>
+          <tr>
+            <td>
+              Pozicioni i punes
+            </td>
+            <td>
+              <input type="text" name="job_title">
+            </td>
+          </tr>
+
+          <tr>
+            <td>
+              Pershkrimi
+            </td>
+            <td>
+              <textarea name="job_description" rows="8" cols="40"></textarea>
+            </td>
+          </tr>
+
+          <tr>
+            <td colspan="2" style="text-align: right;">
+              <input type="submit" class="btn btn-md btn-primary" style="margin-top: 0.5em;" value="Shto pozicion">
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </form>
+  </div>
+
+  <div class="company--interested-students">
+    <ul>
+      <?php while ($row = mysqli_fetch_assoc($result)): ?>
+        <li><?= "{$row['first_name']} {$row['last_name']} ({$row['email']}) eshte i interesuar ne \"{$row['title']}\"" ?></li>
+      <?php endwhile; ?>
+    </ul>
+  </div>
+</div>
+
+
+<?php mysqli_close($connection); ?>
