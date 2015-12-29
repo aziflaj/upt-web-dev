@@ -146,3 +146,16 @@
   position: relative;
   left: 32%;
 }
+
+
+
+.about {
+  margin-top: 2em;
+  text-align: center;
+  min-height: 420px;
+}
+
+.about__text {
+  margin: 2em 2em 0 2em;
+  text-align: left;
+}

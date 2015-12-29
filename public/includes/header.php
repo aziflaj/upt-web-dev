@@ -19,7 +19,7 @@
           <a href="/">Kreu</a>
         </li>
         <li>
-          <a href="">Rreth nesh</a>
+          <a href="/about.php">Rreth nesh</a>
         </li>
 
         <?php if (isset($_SESSION['id'])): ?>
@@ -31,10 +31,10 @@
         </li>
         <?php else: ?>
         <li>
-          <a href="login.php">Hyr</a>
+          <a href="/login.php">Hyr</a>
         </li>
         <li>
-          <a href="signup.php">Regjistrohu</a>
+          <a href="/signup.php">Regjistrohu</a>
         </li>
         <?php endif; ?>
       </ul>
