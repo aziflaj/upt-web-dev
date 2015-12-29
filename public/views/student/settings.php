@@ -18,7 +18,7 @@ mysqli_close($connection);
 <div class="content student--settings">
   <h1>Ndrysho te dhenat personale</h1>
   <div class="student--settings__form">
-    <form action="../../student/update_settings.php" method="post">
+    <form action="../../student/update_settings.php" method="post" enctype="multipart/form-data">
       <table border="0">
         <tbody>
           <tr>
@@ -42,7 +42,9 @@ mysqli_close($connection);
             </td>
             <td>
               <?php if ($this_student['cv_url']): ?>
-                <a href="<?= $this_student['cv_url'] ?>">Shiko CV-ne ekzistuese</a>
+                <a href="<?= $this_student['cv_url'] ?>">
+                  <img src="../../assets/images/icons/icon-pdf.png" alt="Shiko CV-ne" />
+                </a>
               <?php else: ?>
                 <p style="color: red; font-size: 12px">
                   Nuk keni nje CV ekzistuese.<br>Ju lutem ngarkoni nje.
