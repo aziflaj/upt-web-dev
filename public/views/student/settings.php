@@ -12,13 +12,14 @@ $join_sql .= "where users.id = students.user_id and students.id = $student_id";
 $result = mysqli_query($connection, $join_sql);
 // we need only the 1st result and we're sure there is one! (the user is logged in, right?)
 $this_student = mysqli_fetch_assoc($result);
+mysqli_close($connection);
 ?>
 
 <div class="content student--settings">
   <h1>Ndrysho te dhenat personale</h1>
   <div class="student--settings__form">
     <form action="" method="post">
-      <table border="1">
+      <table border="0">
         <tbody>
           <tr>
             <td>Emri</td>
@@ -77,7 +78,7 @@ $this_student = mysqli_fetch_assoc($result);
 
           <tr style="text-align: center;">
             <td colspan="2">
-              <input type="submit" id="update_submit" class="btn btn-success btn-md" value="Ruaj ndryshimet">
+              <input type="submit" id="update_submit" style="margin:2em;" class="btn btn-success btn-md" value="Ruaj ndryshimet">
             </td>
           </tr>
         </tbody>

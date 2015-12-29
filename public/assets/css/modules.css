@@ -159,3 +159,18 @@
   margin: 2em 2em 0 2em;
   text-align: left;
 }
+
+
+
+.student--settings {
+  margin-top: 2em;
+  margin-bottom: 5em;
+  text-align: center;
+}
+
+.student--settings__form table {
+  text-align: left;
+  margin-top: 1em;
+  position: relative;
+  left: 30%;
+}
