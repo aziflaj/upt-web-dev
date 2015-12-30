@@ -42,7 +42,7 @@ mysqli_close($connection);
             </td>
             <td>
               <?php if ($this_student['cv_url']): ?>
-                <a href="<?= $this_student['cv_url'] ?>">
+                <a href="<?= $this_student['cv_url'] ?>" target="_blank">
                   <img src="../../assets/images/icons/icon-pdf.png" alt="Shiko CV-ne" />
                 </a>
               <?php else: ?>

@@ -31,7 +31,7 @@
 
         <?php if (isset($_SESSION['id'])): ?>
         <li>
-          <a href="#">Settings</a>
+          <a href="settings.php">Settings</a>
         </li>
         <li>
           <a href="/logout.php">Dil</a>

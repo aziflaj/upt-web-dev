@@ -12,7 +12,7 @@ if (isset($_SESSION['id'])) {
       break;
 
     case 2:
-      include_once('views/student/home.php');
+      include_once('views/student/settings.php');
       break;
 
     case 3:

@@ -200,6 +200,33 @@
   left: 30%;
 }
 
+.student__job-entries {
+  margin: 2em 0;
+}
+
+.student__job--entry {
+  display: block;
+  padding: 1em 0.5em;
+  margin: 1em;
+  width: 70%;
+  border: 1px #3D3D3D solid;
+  border-radius: 3px;
+}
+
+.student__job--company {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.student__job--company > a {
+  text-decoration: none;
+}
+
+.student__job--title {
+  font-weight: bold;
+  color: #3D3D3D;
+}
+
 
 
 
