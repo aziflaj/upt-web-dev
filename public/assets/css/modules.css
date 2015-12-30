@@ -200,11 +200,11 @@
   left: 30%;
 }
 
-.student__job-entries {
+.student__home-feed {
   margin: 2em 0;
 }
 
-.student__job--entry {
+.student__post {
   display: block;
   padding: 1em 0.5em;
   margin: 1em;
@@ -213,16 +213,16 @@
   border-radius: 3px;
 }
 
-.student__job--company {
+.student__post--author {
   font-size: 1.5em;
   font-weight: bold;
 }
 
-.student__job--company > a {
+.student__post--author > a {
   text-decoration: none;
 }
 
-.student__job--title {
+.student__post--title {
   font-weight: bold;
   color: #3D3D3D;
 }
