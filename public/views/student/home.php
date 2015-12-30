@@ -1,6 +1,5 @@
 <?php
 $db = require_once(__DIR__ . '/../../config/db.php');
-
 $connection = mysqli_connect($db['host'], $db['username'], $db['password'], $db['database']);
 
 $entries_sql = "select je.title as title, je.description as description, ";

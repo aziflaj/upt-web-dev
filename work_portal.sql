@@ -61,6 +61,7 @@ CREATE TABLE IF NOT EXISTS `work_portal`.`students` (
   `cv_url` VARCHAR(255) NULL,
   `dob` DATE NOT NULL,
   `degree` VARCHAR(45) NOT NULL,
+  `bio` MEDIUMTEXT NULL,
   PRIMARY KEY (`id`),
   INDEX `id_idx` (`user_id` ASC),
   CONSTRAINT `student_user_id`
@@ -221,10 +222,10 @@ COMMIT;
 -- -----------------------------------------------------
 START TRANSACTION;
 USE `work_portal`;
-INSERT INTO `work_portal`.`students` (`id`, `first_name`, `last_name`, `user_id`, `cv_url`, `dob`, `degree`) VALUES (DEFAULT, 'Aldo', 'Ziflaj', 1, '', '1995-05-05', 'undergraduate');
-INSERT INTO `work_portal`.`students` (`id`, `first_name`, `last_name`, `user_id`, `cv_url`, `dob`, `degree`) VALUES (DEFAULT, 'Alban', 'Dervishi', 5, '', '1975-11-04', 'master');
-INSERT INTO `work_portal`.`students` (`id`, `first_name`, `last_name`, `user_id`, `cv_url`, `dob`, `degree`) VALUES (DEFAULT, 'Kristi', 'Hoxha', 6, '', '1990-07-11', 'master');
-INSERT INTO `work_portal`.`students` (`id`, `first_name`, `last_name`, `user_id`, `cv_url`, `dob`, `degree`) VALUES (DEFAULT, 'Denis', 'Turhani', 7, '', '1994-02-14', 'undergraduate');
+INSERT INTO `work_portal`.`students` (`id`, `first_name`, `last_name`, `user_id`, `cv_url`, `dob`, `degree`, `bio`) VALUES (DEFAULT, 'Aldo', 'Ziflaj', 1, '', '1995-05-05', 'undergraduate', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. ');
+INSERT INTO `work_portal`.`students` (`id`, `first_name`, `last_name`, `user_id`, `cv_url`, `dob`, `degree`, `bio`) VALUES (DEFAULT, 'Alban', 'Dervishi', 5, '', '1975-11-04', 'master', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. ');
+INSERT INTO `work_portal`.`students` (`id`, `first_name`, `last_name`, `user_id`, `cv_url`, `dob`, `degree`, `bio`) VALUES (DEFAULT, 'Kristi', 'Hoxha', 6, '', '1990-07-11', 'master', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. ');
+INSERT INTO `work_portal`.`students` (`id`, `first_name`, `last_name`, `user_id`, `cv_url`, `dob`, `degree`, `bio`) VALUES (DEFAULT, 'Denis', 'Turhani', 7, '', '1994-02-14', 'undergraduate', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. ');
 
 COMMIT;
 

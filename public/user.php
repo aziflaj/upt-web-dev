@@ -10,11 +10,11 @@ $result = mysqli_query($connection, $sql);
 if ($result) {
   $user = mysqli_fetch_assoc($result); // there should be only 1
 } else {
+  mysqli_close($connection);
   include_once(__DIR__ . "/errors/404.php");
   include_once('includes/footer.php');
   return;
 }
-mysqli_close($connection);
 
 if ($user) {
   $id = $_GET['id'];

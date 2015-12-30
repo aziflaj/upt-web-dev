@@ -48,3 +48,14 @@
 .btn.btn-sm {
   font-size: 0.8em;
 }
+
+
+.pull-left {
+  float: left;
+  margin: 0.5em;
+}
+
+.pull-right {
+  float: right;
+  margin: 0.5em;
+}
