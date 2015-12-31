@@ -294,3 +294,22 @@
 .profile--bio {
   margin-bottom: 2em;
 }
+
+.profile--entries__title {
+  color: #3D3D3D;
+  font-weight: bold;
+  font-size: 1.4em;
+}
+
+.profile--entry {
+  display: block;
+  padding: 1em 0.5em;
+  border: 1px #3D3D3D solid;
+  border-radius: 3px;
+  margin-bottom: 1em;
+}
+
+.profile--entry__title {
+  font-weight: bold;
+  padding-bottom: 0.3em;
+}
