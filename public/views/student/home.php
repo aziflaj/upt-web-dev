@@ -32,6 +32,10 @@ mysqli_close($connection);
         <?= $row['title'] ?>
       </div>
 
+      <div class="student__post--time">
+        <?= $row['created_at'] ?>
+      </div>
+
       <div class="student__post--description">
         <?= $row['description'] ?>
       </div>
