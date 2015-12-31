@@ -1,7 +1,7 @@
 <!-- footer -->
 <div class="row footer">
   <div class="col-narrow footer__copyright">
-    &copy; Copyright by Aldo Ziflaj <?php echo ( date('Y') > 2015 ? "2015 - " . date('Y') : "2015" ); ?>
+    &copy; Copyright by Aldo Ziflaj <?= (date('Y') > 2015 ? "2015 - " . date('Y') : "2015") ?>
   </div>
 
   <div class="footer__social">
