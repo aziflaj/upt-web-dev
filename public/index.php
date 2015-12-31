@@ -1,8 +1,6 @@
 <?php
 include_once('includes/header.php');
 
-session_start();
-
 if (isset($_SESSION['id'])) {
 
   switch($_SESSION['type_id']) {

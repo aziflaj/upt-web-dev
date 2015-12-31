@@ -26,7 +26,7 @@ $result = mysqli_query($connection, $join_sql);
               Pozicioni i punes
             </td>
             <td>
-              <input type="text" name="job_title">
+              <input type="text" name="job_title" size="31">
             </td>
           </tr>
 

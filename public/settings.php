@@ -1,6 +1,4 @@
 <?php
-session_start();
-
 include_once('includes/header.php');
 
 if (isset($_SESSION['id'])) {

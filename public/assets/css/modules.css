@@ -313,3 +313,41 @@
   font-weight: bold;
   padding-bottom: 0.3em;
 }
+
+
+
+
+/******************************************************
+ *            _           _                           *
+ *   __ _  __| |_ __ ___ (_)_ __                      *
+ *  / _` |/ _` | '_ ` _ \| | '_  \                    *
+ * | (_| | (_| | | | | | | | | | |                    *
+ *  \__,_|\__,_|_| |_| |_|_|_| |_|                    *
+ ******************************************************/
+
+.admin--create-post table {
+  text-align: left;
+  margin-top: 1em;
+  position: relative;
+  left: 25%;
+}
+
+.admin--feeds {
+  margin: 2em 0;
+}
+
+.admin--feeds > .feed {
+  margin: 1em 0;
+  border: 1px #3D3D3D solid;
+  border-radius: 3px;
+  padding: 1em;
+}
+
+.feed--title {
+  font-size: 1.2em;
+}
+
+.feed--time {
+  font-size: 0.8em;
+  padding: 0.5em 0;
+}
