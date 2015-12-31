@@ -35,7 +35,7 @@ mysqli_close($connection);
       </div>
     </div>
 
-    <div class="col-wide">
+    <div class="col-wide profile--bio">
       <?= $user['bio'] ?>
     </div>
   </div>

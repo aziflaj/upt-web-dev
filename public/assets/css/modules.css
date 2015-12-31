@@ -290,3 +290,7 @@
   font-weight: bold;
   font-size: 1.8em;
 }
+
+.profile--bio {
+  margin-bottom: 2em;
+}

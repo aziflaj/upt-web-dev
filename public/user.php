@@ -28,7 +28,7 @@ if ($user) {
       break;
 
     case 3:
-      include(__DIR__ . "/views/admin/me.php");
+      include(__DIR__ . "/views/company/me.php");
       break;
 
     default:
