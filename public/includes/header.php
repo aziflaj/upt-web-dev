@@ -31,19 +31,38 @@
         </li>
 
         <?php if (isset($_SESSION['id'])): ?>
-        <li>
-          <a href="settings.php">Settings</a>
-        </li>
-        <li>
-          <a href="/logout.php">Dil</a>
-        </li>
+            <?php if ($_SESSION['type_id'] == 2): // student ?>
+              <li>
+                <a href="/interests.php">Interesat e mia</a>
+              </li>
+
+            <?php elseif ($_SESSION['type_id'] == 3): // company ?>
+              <li>
+                <a href="#">Punet e mia</a>
+              </li>
+
+            <?php elseif($_SESSION['type_id'] == 1): // admin ?>
+              <li>
+                <a href="#">Administratoret</a>
+              </li>
+              <li>
+                <a href="#">Kompanite</a>
+              </li>
+            <?php endif; ?>
+
+          <li>
+            <a href="settings.php">Settings</a>
+          </li>
+          <li>
+            <a href="/logout.php">Dil</a>
+          </li>
         <?php else: ?>
-        <li>
-          <a href="/login.php">Hyr</a>
-        </li>
-        <li>
-          <a href="/signup.php">Regjistrohu</a>
-        </li>
+          <li>
+            <a href="/login.php">Hyr</a>
+          </li>
+          <li>
+            <a href="/signup.php">Regjistrohu</a>
+          </li>
         <?php endif; ?>
       </ul>
     </div>
