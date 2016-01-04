@@ -3,7 +3,7 @@ $db = require_once(__DIR__ . '/../../config/db.php');
 $connection = mysqli_connect($db['host'], $db['username'], $db['password'], $db['database']);
 $company_id = $_SESSION['local_id'];
 
-$jobs_sql = "select title, description ";
+$jobs_sql = "select id, title, description ";
 $jobs_sql .= "from job_entries ";
 $jobs_sql .= "where company_id = $company_id ";
 $jobs_sql .= "order by created_at desc";
@@ -23,7 +23,7 @@ mysqli_close($connection);
         <?= $row['description'] ?>
       </div>
       <div class="job-controls">
-        <a href="#" class="btn btn-danger">Fshi</a>
+        <a href="/company/delete_job.php?id=<?= $row['id'] ?>" class="btn btn-danger">Fshi</a>
       </div>
     </div>
   <?php endwhile; ?>
