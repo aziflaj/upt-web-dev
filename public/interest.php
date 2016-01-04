@@ -24,7 +24,7 @@ switch ($action) {
 
   case 'remove':
     $delete_sql = "delete from students_interested ";
-    $delete_sql = "where position_id = $position_id and student_id = {$_SESSION['local_id']}";
+    $delete_sql .= "where position_id = $position_id and student_id = {$_SESSION['local_id']}";
     mysqli_query($connection, $delete_sql);
     break;
 }

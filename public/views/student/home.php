@@ -23,7 +23,6 @@ $interests = array();
 while ($interest_row = mysqli_fetch_assoc($interest_result)) {
   array_push($interests, $interest_row['position_id']);
 }
-print_r($interests);
 mysqli_close($connection);
 ?>
 
