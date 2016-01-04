@@ -18,7 +18,12 @@ $interests_sql .= "from students_interested ";
 $interests_sql .= "where student_id = {$_SESSION['local_id']}";
 
 $result = mysqli_query($connection, $entries_sql);
-$interests = mysqli_fetch_array(mysqli_query($connection, $interests_sql), MYSQLI_NUM);
+$interest_result = mysqli_query($connection, $interests_sql);
+$interests = array();
+while ($interest_row = mysqli_fetch_assoc($interest_result)) {
+  array_push($interests, $interest_row['position_id']);
+}
+print_r($interests);
 mysqli_close($connection);
 ?>
 
@@ -44,14 +49,18 @@ mysqli_close($connection);
         <?= $row['description'] ?>
       </div>
 
-      <div class="student__interest--control">
-        <?php if(in_array($row['entry_id'], $interests)): ?>
-          <a href="#" class="btn btn-danger">Nuk jam i interesuar</a>
-        <?php else: ?>
-          <a href="#" class="btn btn-success">Jam i interesuar</a>
-        <?php endif; ?>
+      <?php if ($row['entry_id']): ?>
+        <div class="student__interest--control">
+          <?php if(in_array($row['entry_id'], $interests)): ?>
+            <a class="btn btn-danger" href="/interest.php?position_id=<?= $row['entry_id'] ?>&action=remove">
+              Nuk jam i interesuar
+            </a>
+          <?php else: ?>
+            <a class="btn btn-success" href="/interest.php?position_id=<?= $row['entry_id'] ?>&action=add">Jam i interesuar</a>
+          <?php endif; ?>
+        </div>
+      <?php endif; ?>
       </div>
-    </div>
   <?php endwhile; ?>
 
 </div>
