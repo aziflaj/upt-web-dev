@@ -15,23 +15,27 @@ mysqli_close($connection);
 
 <div class="content student--interests">
   <?php while ($row = mysqli_fetch_assoc($result)): ?>
-    <div class="student__post">
-      <div class="student__post--author">
+    <div class="student__interest">
+      <div class="student__interest--company">
         <a href="/user.php?id=<?= $row['user_id'] ?>">
           <?= $row['company_name'] ?>
         </a>
       </div>
 
-      <div class="student__post--title">
+      <div class="student__interest--title">
         <?= $row['title'] ?>
       </div>
 
-      <div class="student__post--time">
+      <div class="student__interest--time">
         <?= $row['created_at'] ?>
       </div>
 
-      <div class="student__post--description">
+      <div class="student__interest--description">
         <?= $row['description'] ?>
+      </div>
+
+      <div class="student__interest--control">
+        <a href="#" class="btn btn-danger">Nuk jam i interesuar</a>
       </div>
     </div>
   <?php endwhile; ?>

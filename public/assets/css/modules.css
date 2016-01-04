@@ -232,6 +232,38 @@
   padding: 0.5em 0;
 }
 
+.student__interest {
+  display: block;
+  padding: 1em 0.5em;
+  margin: 1em;
+  width: 70%;
+  border: 1px #3D3D3D solid;
+  border-radius: 3px;
+}
+
+.student__interest--company {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.student__interest--company > a {
+  text-decoration: none;
+}
+
+.student__interest--title {
+  font-weight: bold;
+  color: #3D3D3D;
+}
+
+.student__interest--time {
+  font-size: 0.8em;
+  padding: 0.5em 0;
+}
+
+.student__interest--control {
+  margin-top: 0.833em;
+}
+
 
 
 
