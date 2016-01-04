@@ -18,7 +18,7 @@ $result = mysqli_query($connection, $join_sql);
 
 <div class="content company--dashboard">
   <div class="company--dashboard__create-post">
-    <form action="" method="post">
+    <form action="/company/post_job.php" method="post">
       <table border="0">
         <tbody>
           <tr>
