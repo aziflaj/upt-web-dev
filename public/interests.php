@@ -8,6 +8,7 @@ switch ($_SESSION['type_id']) {
 
   case 3:
     include_once(__DIR__ . '/views/company/interests.php');
+    break;
 }
 
 include_once('includes/footer.php');

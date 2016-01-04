@@ -286,6 +286,31 @@
   margin: 0.8em 0;
 }
 
+.jobs-list {
+  margin: 2em 0;
+}
+
+.jobs-list h2 {
+  margin-bottom: 2em;
+}
+
+.job {
+  padding: 1.3em 0.8em;
+  margin: 0.8em 0;
+  border: 1px #3D3D3D solid;
+  border-radius: 3px;
+}
+
+.job-title {
+  font-size: 1.3em;
+  font-weight: bold;
+  color: #3D3D3D;
+}
+
+.job-controls {
+  margin-top: 0.83em;
+}
+
 
 
 /******************************************************

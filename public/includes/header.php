@@ -38,7 +38,7 @@
 
             <?php elseif ($_SESSION['type_id'] == 3): // company ?>
               <li>
-                <a href="#">Punet e mia</a>
+                <a href="/interests.php">Punet e mia</a>
               </li>
 
             <?php elseif($_SESSION['type_id'] == 1): // admin ?>
