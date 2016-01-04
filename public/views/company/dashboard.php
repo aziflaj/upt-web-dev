@@ -5,7 +5,7 @@ $user_id = $_SESSION['id'];
 
 $connection = mysqli_connect($db['host'], $db['username'], $db['password'], $db['database']);
 
-$join_sql = "select first_name, last_name, cv_url, email, title ";
+$join_sql = "select users.id as uid, first_name, last_name, cv_url, email, title ";
 $join_sql .= "from students ";
 $join_sql .= "inner join students_interested as si ";
 $join_sql .= "on si.student_id = students.id ";
@@ -35,7 +35,7 @@ $result = mysqli_query($connection, $join_sql);
               Pershkrimi
             </td>
             <td>
-              <textarea name="job_description" rows="8" cols="40"></textarea>
+              <textarea name="job_description" rows="6" cols="40"></textarea>
             </td>
           </tr>
 
@@ -50,11 +50,27 @@ $result = mysqli_query($connection, $join_sql);
   </div>
 
   <div class="company--interested-students">
-    <ul>
-      <?php while ($row = mysqli_fetch_assoc($result)): ?>
-        <li><?= "{$row['first_name']} {$row['last_name']} ({$row['email']}) eshte i interesuar ne \"{$row['title']}\"" ?></li>
-      <?php endwhile; ?>
-    </ul>
+    <?php while($row = mysqli_fetch_assoc($result)): ?>
+      <div class="company--interested-list">
+        <div class="interested-item">
+          <a href="/user.php?id=<?= $row['uid'] ?>"><?= $row['first_name'] . ' ' . $row['last_name'] ?></a>
+          eshte i interesuar ne <?= $row['title'] ?>
+        <div class="interested-item__curriculum">
+          <?php if ($row['cv_url']): ?>
+            Shkarko CV ketu
+            <a href="<?= $row['cv_url'] ?>" target="_blank">
+              <img src="../../assets/images/icons/icon-pdf.png" alt="Shiko CV-ne" />
+            </a>
+          <?php else: ?>
+            Nuk ka CV
+          <?php endif; ?>
+        </div>
+        <div class="interested-item__contact">
+          <a href="mailto:<?= $row['email'] ?>">Dergo email</a>
+        </div>
+      </div>
+    </div>
+    <?php endwhile; ?>
   </div>
 </div>
 
