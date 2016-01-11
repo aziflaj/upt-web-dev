@@ -298,6 +298,11 @@
   margin: 0.8em 0;
 }
 
+.jobs-list__empty {
+  font-size: 1.6em;
+  text-align: center;
+}
+
 .jobs-list {
   margin: 2em 0;
 }

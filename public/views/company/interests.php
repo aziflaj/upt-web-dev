@@ -13,18 +13,24 @@ mysqli_close($connection);
 ?>
 
 <div class="content jobs-list">
-  <h2>Lista e publikimeve nga <?= $_SESSION['user_handle'] ?></h2>
-  <?php while($row = mysqli_fetch_assoc($result)): ?>
-    <div class="job">
-      <div class="job-title">
-        <?= $row['title'] ?>
-      </div>
-      <div class="job-description">
-        <?= $row['description'] ?>
-      </div>
-      <div class="job-controls">
-        <a href="/company/delete_job.php?id=<?= $row['id'] ?>" class="btn btn-danger">Fshi</a>
-      </div>
+  <?php if(!mysqli_num_rows($result)): ?>
+    <div class="jobs-list__empty">
+      Ju nuk keni asnje publikim pune. Shtoni nje publikim te ri <a href="/">ketu</a>.
     </div>
-  <?php endwhile; ?>
+  <?php else: ?>
+    <h2>Lista e publikimeve nga <?= $_SESSION['user_handle'] ?></h2>
+    <?php while($row = mysqli_fetch_assoc($result)): ?>
+      <div class="job">
+        <div class="job-title">
+          <?= $row['title'] ?>
+        </div>
+        <div class="job-description">
+          <?= $row['description'] ?>
+        </div>
+        <div class="job-controls">
+          <a href="/company/delete_job.php?id=<?= $row['id'] ?>" class="btn btn-danger">Fshi</a>
+        </div>
+      </div>
+    <?php endwhile; ?>
+  <?php endif; ?>
 </div>

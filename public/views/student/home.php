@@ -27,7 +27,7 @@ mysqli_close($connection);
 ?>
 
 <div class="content student__home-feed">
-  <?php if (!mysqli_num_rows($interest_result)): ?>
+  <?php if (!mysqli_num_rows($result)): ?>
     <div class="student__post-empty">
       Na vjen keq, por nuk ka asnje postim pune kete moment. Ju lutem provojeni me vone
     </div>
@@ -52,7 +52,7 @@ mysqli_close($connection);
           <?= $row['description'] ?>
         </div>
 
-        <?php if ($row['entry_id']): ?>
+        <?php if ($row['entry_id'] != null): ?>
           <div class="student__interest--control">
             <?php if(in_array($row['entry_id'], $interests)): ?>
               <a class="btn btn-danger" href="/interest.php?position_id=<?= $row['entry_id'] ?>&action=remove">
