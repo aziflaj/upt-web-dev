@@ -27,39 +27,44 @@ mysqli_close($connection);
 ?>
 
 <div class="content student__home-feed">
-
-  <?php while($row = mysqli_fetch_assoc($result)): ?>
-    <div class="student__post">
-      <div class="student__post--author">
-        <a href="/user.php?id=<?= $row['user_id'] ?>">
-          <?= $row['author'] ?>
-        </a>
-      </div>
-
-      <div class="student__post--title">
-        <?= $row['title'] ?>
-      </div>
-
-      <div class="student__post--time">
-        <?= $row['created_at'] ?>
-      </div>
-
-      <div class="student__post--description">
-        <?= $row['description'] ?>
-      </div>
-
-      <?php if ($row['entry_id']): ?>
-        <div class="student__interest--control">
-          <?php if(in_array($row['entry_id'], $interests)): ?>
-            <a class="btn btn-danger" href="/interest.php?position_id=<?= $row['entry_id'] ?>&action=remove">
-              Nuk jam i interesuar
-            </a>
-          <?php else: ?>
-            <a class="btn btn-success" href="/interest.php?position_id=<?= $row['entry_id'] ?>&action=add">Jam i interesuar</a>
-          <?php endif; ?>
+  <?php if (!mysqli_num_rows($interest_result)): ?>
+    <div class="student__post-empty">
+      Na vjen keq, por nuk ka asnje postim pune kete moment. Ju lutem provojeni me vone
+    </div>
+  <?php else: ?>
+    <?php while($row = mysqli_fetch_assoc($result)): ?>
+      <div class="student__post">
+        <div class="student__post--author">
+          <a href="/user.php?id=<?= $row['user_id'] ?>">
+            <?= $row['author'] ?>
+          </a>
         </div>
-      <?php endif; ?>
-      </div>
-  <?php endwhile; ?>
+
+        <div class="student__post--title">
+          <?= $row['title'] ?>
+        </div>
+
+        <div class="student__post--time">
+          <?= $row['created_at'] ?>
+        </div>
+
+        <div class="student__post--description">
+          <?= $row['description'] ?>
+        </div>
+
+        <?php if ($row['entry_id']): ?>
+          <div class="student__interest--control">
+            <?php if(in_array($row['entry_id'], $interests)): ?>
+              <a class="btn btn-danger" href="/interest.php?position_id=<?= $row['entry_id'] ?>&action=remove">
+                Nuk jam i interesuar
+              </a>
+            <?php else: ?>
+              <a class="btn btn-success" href="/interest.php?position_id=<?= $row['entry_id'] ?>&action=add">Jam i interesuar</a>
+            <?php endif; ?>
+          </div>
+        <?php endif; ?>
+        </div>
+    <?php endwhile; ?>
+  <?php endif; ?>
 
 </div>

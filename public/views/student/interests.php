@@ -14,31 +14,37 @@ mysqli_close($connection);
 ?>
 
 <div class="content student--interests">
-  <?php while ($row = mysqli_fetch_assoc($result)): ?>
-    <div class="student__interest">
-      <div class="student__interest--company">
-        <a href="/user.php?id=<?= $row['user_id'] ?>">
-          <?= $row['company_name'] ?>
-        </a>
-      </div>
-
-      <div class="student__interest--title">
-        <?= $row['title'] ?>
-      </div>
-
-      <div class="student__interest--time">
-        <?= $row['created_at'] ?>
-      </div>
-
-      <div class="student__interest--description">
-        <?= $row['description'] ?>
-      </div>
-
-      <div class="student__interest--control">
-        <a class="btn btn-danger" href="/interest.php?position_id=<?= $row['id'] ?>&action=remove">
-          Nuk jam i interesuar
-        </a>
-      </div>
+  <?php if (!mysqli_num_rows($result)): ?>
+    <div class="student__interest-empty">
+      Ju nuk jeni te interesuar ne asnje vend pune
     </div>
-  <?php endwhile; ?>
+  <?php else: ?>
+    <?php while ($row = mysqli_fetch_assoc($result)): ?>
+      <div class="student__interest">
+        <div class="student__interest--company">
+          <a href="/user.php?id=<?= $row['user_id'] ?>">
+            <?= $row['company_name'] ?>
+          </a>
+        </div>
+
+        <div class="student__interest--title">
+          <?= $row['title'] ?>
+        </div>
+
+        <div class="student__interest--time">
+          <?= $row['created_at'] ?>
+        </div>
+
+        <div class="student__interest--description">
+          <?= $row['description'] ?>
+        </div>
+
+        <div class="student__interest--control">
+          <a class="btn btn-danger" href="/interest.php?position_id=<?= $row['id'] ?>&action=remove">
+            Nuk jam i interesuar
+          </a>
+        </div>
+      </div>
+    <?php endwhile; ?>
+  <?php endif; ?>
 </div>

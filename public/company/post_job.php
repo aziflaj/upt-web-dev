@@ -15,5 +15,6 @@ $company_id = $_SESSION['local_id'];
 $add_sql = "insert into job_entries (title, description, company_id) ";
 $add_sql .= "values ('$title', '$description', $company_id)";
 
+mysqli_query($connection, $add_sql);
 return header("location: /");
 ?>

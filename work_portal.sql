@@ -250,7 +250,7 @@ INSERT INTO `work_portal`.`companies` (`id`, `company_name`, `user_id`, `descrip
 
 COMMIT;
 
-
+/*
 -- -----------------------------------------------------
 -- Data for table `work_portal`.`job_entries`
 -- -----------------------------------------------------
@@ -261,8 +261,8 @@ INSERT INTO `work_portal`.`job_entries` (`id`, `company_id`, `title`, `descripti
 INSERT INTO `work_portal`.`job_entries` (`id`, `company_id`, `title`, `description`, `created_at`) VALUES (3, 2, 'Zhvillues Android', 'Kerkohet Zhvillues, per zhvillimin dhe mirembajtjen e aplikacionit Mobile ne Android. Perfshihehen te gjitha fazat qe nga konceptimi, zhvillimi dhe mirembajtja', DEFAULT);
 
 COMMIT;
-
-
+*/
+/*
 -- -----------------------------------------------------
 -- Data for table `work_portal`.`students_interested`
 -- -----------------------------------------------------
@@ -272,8 +272,8 @@ INSERT INTO `work_portal`.`students_interested` (`id`, `position_id`, `student_i
 INSERT INTO `work_portal`.`students_interested` (`id`, `position_id`, `student_id`, `company_id`) VALUES (DEFAULT, 1, 3, 1);
 
 COMMIT;
-
-
+*/
+/*
 -- -----------------------------------------------------
 -- Data for table `work_portal`.`admin_notifications`
 -- -----------------------------------------------------
@@ -282,7 +282,7 @@ USE `work_portal`;
 INSERT INTO `work_portal`.`admin_notifications` (`id`, `title`, `description`, `admin_id`, `created_at`) VALUES (DEFAULT, 'Sistemi eshte online!', 'Sistemi eshte online duke filluar nga data e sotme. Perdorim te mbare dhe ftoni miqte tuaj t\'i bashkohen Portalit te Punes', 1, DEFAULT);
 
 COMMIT;
-
+*/
 
 SET SQL_MODE=@OLD_SQL_MODE;
 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;

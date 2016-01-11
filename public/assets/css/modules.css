@@ -204,6 +204,12 @@
   margin: 2em 0;
 }
 
+.student__post-empty {
+  font-size: 2em;
+  text-align: center;
+  padding-top: 1.8em;
+}
+
 .student__post {
   display: block;
   padding: 1em 0.5em;
@@ -230,6 +236,12 @@
 .student__post--time {
   font-size: 0.8em;
   padding: 0.5em 0;
+}
+
+.student__interest-empty {
+  font-size: 1.8em;
+  text-align: center;
+  margin-top: 1.8em;
 }
 
 .student__interest {
