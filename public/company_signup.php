@@ -9,19 +9,14 @@ if (isset($_SESSION['id'])) {
 <script src="assets/js/signup.js" charset="utf-8"></script>
 
 <div class="row container-wide content signup">
-  <h1>Regjistrohu si student</h1>
+  <h1>Regjistrohu si kompani</h1>
   <div class="signup__form">
-    <form action="signup/do_signup.php" method="post">
+    <form action="signup/do_company_signup.php" method="post">
       <table border="0">
         <tbody>
           <tr>
-            <td>Emri</td>
-            <td><input type="text" name="first_name"></td>
-          </tr>
-
-          <tr>
-            <td>Mbiemri</td>
-            <td><input type="text" name="last_name"></td>
+            <td>Emri i kompanise</td>
+            <td><input type="text" name="company_name"></td>
           </tr>
 
           <tr>
@@ -54,31 +49,6 @@ if (isset($_SESSION['id'])) {
             </td>
           </tr>
 
-          <tr>
-            <td>Arsimimi</td>
-            <td>
-              <select name="education" id="education">
-                <option value="undergraduate">Bachelor ne zhvillim</option>
-                <option value="bachelor">Diplome Bachelor</option>
-                <option value="graduate">Master ne zhvillim</option>
-                <option value="master">Diplome Master</option>
-                <option value="doctorate">Doktorature</option>
-              </select>
-            </td>
-          </tr>
-
-          <tr>
-            <td>Ditelindja (dd/MM/yyyy)</td>
-            <td>
-              <input type="date" name="dob" id="signup_dob" oninput="validateDate()">
-            </td>
-            <td>
-              <span id="invalid_date_msg" style="visibility: hidden; color: red; font-size: 12px">
-                Date jo e sakte
-              </span>
-            </td>
-          </tr>
-
           <tr style="text-align: center;">
             <td colspan="2">
               E keni nje llogari? <a href="login.php">Hyni ketu</a>
@@ -87,7 +57,7 @@ if (isset($_SESSION['id'])) {
 
           <tr style="text-align: center;">
             <td colspan="2">
-              Jeni nje kompani? <a href="company_signup.php">Regjistrohuni ketu</a>
+              Jeni nje student? <a href="signup.php">Regjistrohuni ketu</a>
             </td>
           </tr>
 

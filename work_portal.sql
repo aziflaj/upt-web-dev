@@ -103,7 +103,7 @@ CREATE TABLE IF NOT EXISTS `work_portal`.`companies` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `company_name` VARCHAR(45) NOT NULL,
   `user_id` INT(11) NOT NULL,
-  `description` MEDIUMTEXT NOT NULL,
+  `description` MEDIUMTEXT NULL,
   `website` VARCHAR(45) NULL,
   PRIMARY KEY (`id`),
   INDEX `user_id_idx` (`user_id` ASC),
@@ -250,39 +250,6 @@ INSERT INTO `work_portal`.`companies` (`id`, `company_name`, `user_id`, `descrip
 
 COMMIT;
 
-/*
--- -----------------------------------------------------
--- Data for table `work_portal`.`job_entries`
--- -----------------------------------------------------
-START TRANSACTION;
-USE `work_portal`;
-INSERT INTO `work_portal`.`job_entries` (`id`, `company_id`, `title`, `description`, `created_at`) VALUES (1, 1, 'Zhvillues .NET', 'Kerkohet zhvillues ne platformen .NET. Kandidati te kete njohuri te mira ne ASP.NET, HTML, CSS, JavaScript dhe jQuery', DEFAULT);
-INSERT INTO `work_portal`.`job_entries` (`id`, `company_id`, `title`, `description`, `created_at`) VALUES (2, 1, 'Data Entry', 'Kerkohet Data Entry', DEFAULT);
-INSERT INTO `work_portal`.`job_entries` (`id`, `company_id`, `title`, `description`, `created_at`) VALUES (3, 2, 'Zhvillues Android', 'Kerkohet Zhvillues, per zhvillimin dhe mirembajtjen e aplikacionit Mobile ne Android. Perfshihehen te gjitha fazat qe nga konceptimi, zhvillimi dhe mirembajtja', DEFAULT);
-
-COMMIT;
-*/
-/*
--- -----------------------------------------------------
--- Data for table `work_portal`.`students_interested`
--- -----------------------------------------------------
-START TRANSACTION;
-USE `work_portal`;
-INSERT INTO `work_portal`.`students_interested` (`id`, `position_id`, `student_id`, `company_id`) VALUES (DEFAULT, 3, 1, 2);
-INSERT INTO `work_portal`.`students_interested` (`id`, `position_id`, `student_id`, `company_id`) VALUES (DEFAULT, 1, 3, 1);
-
-COMMIT;
-*/
-/*
--- -----------------------------------------------------
--- Data for table `work_portal`.`admin_notifications`
--- -----------------------------------------------------
-START TRANSACTION;
-USE `work_portal`;
-INSERT INTO `work_portal`.`admin_notifications` (`id`, `title`, `description`, `admin_id`, `created_at`) VALUES (DEFAULT, 'Sistemi eshte online!', 'Sistemi eshte online duke filluar nga data e sotme. Perdorim te mbare dhe ftoni miqte tuaj t\'i bashkohen Portalit te Punes', 1, DEFAULT);
-
-COMMIT;
-*/
 
 SET SQL_MODE=@OLD_SQL_MODE;
 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
