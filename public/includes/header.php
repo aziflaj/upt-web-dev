@@ -43,10 +43,10 @@
 
             <?php elseif($_SESSION['type_id'] == 1): // admin ?>
               <li>
-                <a href="#">Administratoret</a>
+                <a href="/admins.php">Administratoret</a>
               </li>
               <li>
-                <a href="#">Kompanite</a>
+                <a href="/companies.php">Kompanite</a>
               </li>
             <?php endif; ?>
 
