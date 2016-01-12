@@ -19,7 +19,7 @@ $result = mysqli_query($connection, $entries_sql);
 
 <div class="content admin">
   <div class="admin--create-post">
-    <form action="" method="post">
+    <form action="/admin/newpost.php" method="post">
       <table border="0">
         <tbody>
           <tr>
